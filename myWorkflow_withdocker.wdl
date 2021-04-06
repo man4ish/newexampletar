@@ -16,11 +16,15 @@ task myTask
         path=$(realpath bundle)
         echo $path 
         mv bundle/*/* bundle
-        python3 /Users/mkumar1/wdl/tar_example/script.py -t $path/exomiser_genome_template_b38.yml -o ${base}.out_file
+        python3 /script.py -t $path/exomiser_genome_template_b38.yml -o ${base}.out_file
     }
 
     output {
         File out = '${base}.out_file'
+    }
+
+    runtime {
+        docker: "docker.io/man4ish/sampleimage:1.0.0"
     }
 }
 

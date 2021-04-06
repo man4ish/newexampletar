@@ -1,0 +1,46 @@
+#!/bin/bash
+
+cd /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution
+tmpDir=$(mkdir -p "/cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/tmp.27021907" && echo "/cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/tmp.27021907")
+chmod 777 "$tmpDir"
+export _JAVA_OPTIONS=-Djava.io.tmpdir="$tmpDir"
+export TMPDIR="$tmpDir"
+export HOME="$HOME"
+(
+cd /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution
+
+)
+out5447bc26="${tmpDir}/out.$$" err5447bc26="${tmpDir}/err.$$"
+mkfifo "$out5447bc26" "$err5447bc26"
+trap 'rm "$out5447bc26" "$err5447bc26"' EXIT
+tee '/cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution/stdout' < "$out5447bc26" &
+tee '/cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution/stderr' < "$err5447bc26" >&2 &
+(
+cd /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution
+
+
+set -exo pipefail
+mkdir bundle
+echo /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/inputs/-223602523/bundle.tar.gz
+tar -xzf /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/inputs/-223602523/bundle.tar.gz -C bundle
+path=$(realpath bundle)
+echo $path 
+mv bundle/*/* bundle
+#without docker
+python3 /Users/mkumar1/wdl/tar_example/script.py -t $path/exomiser_genome_template_b38.yml -o bundle.tar.gz.out_file
+#with docker
+#python3 /usr/src/app/script.py -t $path/exomiser_genome_template_b38.yml -o bundle.tar.gz.out_file
+)  > "$out5447bc26" 2> "$err5447bc26"
+echo $? > /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution/rc.tmp
+(
+# add a .file in every empty directory to facilitate directory delocalization on the cloud
+cd /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution
+find . -type d -exec sh -c '[ -z "$(ls -A '"'"'{}'"'"')" ] && touch '"'"'{}'"'"'/.file' \;
+)
+(
+cd /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution
+sync
+
+
+)
+mv /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution/rc.tmp /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution/rc

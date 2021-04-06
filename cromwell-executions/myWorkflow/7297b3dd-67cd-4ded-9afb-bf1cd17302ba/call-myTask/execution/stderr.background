@@ -1,0 +1,40 @@
+Unable to find image 'man4ish/sampleimage@sha256:45d5ee3175675f21e769497fafb1a39310adb13d6be82496a016952df42a6bde' locally
+docker.io/man4ish/sampleimage@sha256:45d5ee3175675f21e769497fafb1a39310adb13d6be82496a016952df42a6bde: Pulling from man4ish/sampleimage
+6f28985ad184: Pulling fs layer
+f58644152280: Pulling fs layer
+456500070a3e: Pulling fs layer
+9229690cc337: Pulling fs layer
+47da0924d2de: Pulling fs layer
+835b0e55fd57: Pulling fs layer
+9229690cc337: Waiting
+47da0924d2de: Waiting
+835b0e55fd57: Waiting
+f58644152280: Verifying Checksum
+f58644152280: Download complete
+456500070a3e: Verifying Checksum
+456500070a3e: Download complete
+6f28985ad184: Verifying Checksum
+6f28985ad184: Download complete
+9229690cc337: Verifying Checksum
+9229690cc337: Download complete
+47da0924d2de: Verifying Checksum
+47da0924d2de: Download complete
+835b0e55fd57: Verifying Checksum
+835b0e55fd57: Download complete
+6f28985ad184: Pull complete
+f58644152280: Pull complete
+456500070a3e: Pull complete
+9229690cc337: Pull complete
+47da0924d2de: Pull complete
+835b0e55fd57: Pull complete
+Digest: sha256:45d5ee3175675f21e769497fafb1a39310adb13d6be82496a016952df42a6bde
+Status: Downloaded newer image for man4ish/sampleimage@sha256:45d5ee3175675f21e769497fafb1a39310adb13d6be82496a016952df42a6bde
++ mkdir bundle
++ echo /cromwell-executions/myWorkflow/7297b3dd-67cd-4ded-9afb-bf1cd17302ba/call-myTask/inputs/-223602523/bundle.tar.gz
++ tar -xzf /cromwell-executions/myWorkflow/7297b3dd-67cd-4ded-9afb-bf1cd17302ba/call-myTask/inputs/-223602523/bundle.tar.gz -C bundle
+++ realpath bundle
++ path=/cromwell-executions/myWorkflow/7297b3dd-67cd-4ded-9afb-bf1cd17302ba/call-myTask/execution/bundle
++ echo /cromwell-executions/myWorkflow/7297b3dd-67cd-4ded-9afb-bf1cd17302ba/call-myTask/execution/bundle
++ mv bundle/bundle/exomiser_genome_template_b38.yml bundle
++ python3 script.py -t /cromwell-executions/myWorkflow/7297b3dd-67cd-4ded-9afb-bf1cd17302ba/call-myTask/execution/bundle/exomiser_genome_template_b38.yml -o bundle.tar.gz.out_file
+python3: can't open file 'script.py': [Errno 2] No such file or directory

@@ -1,0 +1,9 @@
++ mkdir bundle
++ echo /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/inputs/-223602523/bundle.tar.gz
++ tar -xzf /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/inputs/-223602523/bundle.tar.gz -C bundle
+++ realpath bundle
++ path=/cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution/bundle
++ echo /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution/bundle
++ mv bundle/bundle/exomiser_genome_template_b38.yml bundle
++ python3 /Users/mkumar1/wdl/tar_example/script.py -t /cromwell-executions/myWorkflow/5447bc26-6730-471e-97b1-1b2c2f65348a/call-myTask/execution/bundle/exomiser_genome_template_b38.yml -o bundle.tar.gz.out_file
+python3: can't open file '/Users/mkumar1/wdl/tar_example/script.py': [Errno 2] No such file or directory

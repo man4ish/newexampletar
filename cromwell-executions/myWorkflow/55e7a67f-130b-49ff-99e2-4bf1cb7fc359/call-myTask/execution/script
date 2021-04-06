@@ -1,0 +1,43 @@
+#!/bin/bash
+
+cd /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution
+tmpDir=$(mkdir -p "/cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/tmp.f0cf6d9d" && echo "/cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/tmp.f0cf6d9d")
+chmod 777 "$tmpDir"
+export _JAVA_OPTIONS=-Djava.io.tmpdir="$tmpDir"
+export TMPDIR="$tmpDir"
+export HOME="$HOME"
+(
+cd /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution
+
+)
+out55e7a67f="${tmpDir}/out.$$" err55e7a67f="${tmpDir}/err.$$"
+mkfifo "$out55e7a67f" "$err55e7a67f"
+trap 'rm "$out55e7a67f" "$err55e7a67f"' EXIT
+tee '/cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution/stdout' < "$out55e7a67f" &
+tee '/cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution/stderr' < "$err55e7a67f" >&2 &
+(
+cd /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution
+
+
+set -exo pipefail
+mkdir bundle
+echo /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/inputs/-223602523/bundle.tar.gz
+tar -xzf /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/inputs/-223602523/bundle.tar.gz -C bundle
+path=$(realpath bundle)
+echo $path 
+mv bundle/*/* bundle
+python3 /script.py -t $path/exomiser_genome_template_b38.yml -o bundle.tar.gz.out_file
+)  > "$out55e7a67f" 2> "$err55e7a67f"
+echo $? > /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution/rc.tmp
+(
+# add a .file in every empty directory to facilitate directory delocalization on the cloud
+cd /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution
+find . -type d -exec sh -c '[ -z "$(ls -A '"'"'{}'"'"')" ] && touch '"'"'{}'"'"'/.file' \;
+)
+(
+cd /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution
+sync
+
+
+)
+mv /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution/rc.tmp /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution/rc
