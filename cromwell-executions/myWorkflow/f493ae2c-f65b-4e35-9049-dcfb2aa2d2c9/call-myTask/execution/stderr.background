@@ -1,0 +1,5 @@
++ mkdir bundle
++ tar -xzf /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/f493ae2c-f65b-4e35-9049-dcfb2aa2d2c9/call-myTask/inputs/-223602523/bundle.tar.gz -C bundle
++ mv bundle/bundle/exomiser_genome_template_b38.yml bundle
++ PWD=/Users/mkumar1/Desktop/apps/Exomiser
++ python3 /Users/mkumar1/wdl/cromwell/script.py -t /Users/mkumar1/Desktop/apps/Exomiser/bundle/exomiser_genome_template_b38.yml -o bundle.tar.gz.out_file

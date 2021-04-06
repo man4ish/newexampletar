@@ -1,0 +1,41 @@
+#!/bin/bash
+
+cd /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/execution
+tmpDir=$(mkdir -p "/Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/tmp.8c2e493a" && echo "/Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/tmp.8c2e493a")
+
+export _JAVA_OPTIONS=-Djava.io.tmpdir="$tmpDir"
+export TMPDIR="$tmpDir"
+export HOME="$HOME"
+(
+cd /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/execution
+
+)
+out538550d0="${tmpDir}/out.$$" err538550d0="${tmpDir}/err.$$"
+mkfifo "$out538550d0" "$err538550d0"
+trap 'rm "$out538550d0" "$err538550d0"' EXIT
+tee '/Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/execution/stdout' < "$out538550d0" &
+tee '/Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/execution/stderr' < "$err538550d0" >&2 &
+(
+cd /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/execution
+
+
+set -exo pipefail
+mkdir bundle
+tar -xzf /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/inputs/-223602523/bundle.tar.gz -C bundle
+#mv bundle/*/* bundle
+PWD=/Users/mkumar1/wdl/tar_example
+python3 /Users/mkumar1/wdl/cromwell/script.py -t $PWD/bundle/exomiser_genome_template_b38.yml -o bundle.tar.gz.out_file
+)  > "$out538550d0" 2> "$err538550d0"
+echo $? > /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/execution/rc.tmp
+(
+# add a .file in every empty directory to facilitate directory delocalization on the cloud
+cd /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/execution
+find . -type d -exec sh -c '[ -z "$(ls -A '"'"'{}'"'"')" ] && touch '"'"'{}'"'"'/.file' \;
+)
+(
+cd /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/execution
+sync
+
+
+)
+mv /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/execution/rc.tmp /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/538550d0-90af-4dec-9ff3-0111e527493e/call-myTask/execution/rc

@@ -1,0 +1,44 @@
+#!/bin/bash
+
+cd /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/execution
+tmpDir=$(mkdir -p "/Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/tmp.9bfccc5b" && echo "/Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/tmp.9bfccc5b")
+
+export _JAVA_OPTIONS=-Djava.io.tmpdir="$tmpDir"
+export TMPDIR="$tmpDir"
+export HOME="$HOME"
+(
+cd /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/execution
+
+)
+out9b6fe97e="${tmpDir}/out.$$" err9b6fe97e="${tmpDir}/err.$$"
+mkfifo "$out9b6fe97e" "$err9b6fe97e"
+trap 'rm "$out9b6fe97e" "$err9b6fe97e"' EXIT
+tee '/Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/execution/stdout' < "$out9b6fe97e" &
+tee '/Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/execution/stderr' < "$err9b6fe97e" >&2 &
+(
+cd /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/execution
+
+
+set -exo pipefail
+mkdir bundle
+echo /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/inputs/-223602523/bundle.tar.gz
+tar -xzf /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/inputs/-223602523/bundle.tar.gz -C bundle
+#path=$(realpath bundle)
+
+mv bundle/*/* bundle
+PWD=/Users/mkumar1/wdl/tar_example
+python3 /Users/mkumar1/wdl/tar_example/script.py -t exomiser_genome_template_b38.yml -o bundle.tar.gz.out_file
+)  > "$out9b6fe97e" 2> "$err9b6fe97e"
+echo $? > /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/execution/rc.tmp
+(
+# add a .file in every empty directory to facilitate directory delocalization on the cloud
+cd /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/execution
+find . -type d -exec sh -c '[ -z "$(ls -A '"'"'{}'"'"')" ] && touch '"'"'{}'"'"'/.file' \;
+)
+(
+cd /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/execution
+sync
+
+
+)
+mv /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/execution/rc.tmp /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/9b6fe97e-1cd7-4573-8c5f-c0cfc650b053/call-myTask/execution/rc
