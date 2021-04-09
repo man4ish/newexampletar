@@ -5,16 +5,14 @@ task myTask
     input 
     {
        File yaml_file
-       File prop_file
-       File data_dir
+        File prop_file
        String base = basename(prop_file)
     }
     
     command {
         set -exo pipefail
-        path=$(realpath ${data_dir})
+        path=$(realpath ${prop_file})
         #echo $(pwd)
-        mkdir -p $path/output
 
         while IFS= read -r line
         do
@@ -32,30 +30,29 @@ task myTask
              oprefix="$(cut -d':' -f1 <<<"$line")"
              oprefix_name_name="$(cut -d':' -f2 <<<"$line")"
              prefix_name=`echo $oprefix_name | sed 's/ *$//g'`
-             echo "$oprefix: $path/"$prefix_fname"/output/result" >> '${base}.yaml.tmp'
+             echo "$oprefix: $path/"$prefix_fname"/result" >> '${base}.yaml.tmp'
           else
              echo "$line" >> '${base}.yaml.tmp'
           fi
         done < "${yaml_file}"
-        mv '${base}.yaml.tmp' '${yaml_file}'
-
+        mv '${base}.yaml.tmp' '${yaml_file}' 
+        
         while IFS= read -r line
         do
           if [[ "$line" == "exomiser.data-directory"* ]]; then
              A="$(cut -d'=' -f1 <<<"$line")"
              echo "$A=$path" >> '${base}.tmp'
-          else
-             echo "$line" >> '${base}.tmp'
+          else 
+             echo "$line" >> '${base}.tmp'   
           fi
         done < "${prop_file}"
-               
+       
         mv '${base}.tmp' '${prop_file}'
-        #path=$(realpath yaml_file)
-        java -Xms2g -Xmx8g -jar /software/reboot-utils/exomiser-cli-12.1.0/exomiser-cli-12.1.0.jar --analysis ${yaml_file} --spring.config.location=${prop_file}
-        tar czvf $path/output.tar.gz $path/output       
+        path=$(realpath yaml_file)
+        #java -Xms8g -Xmx16g -jar /software/reboot-utils/exomiser-cli-12.1.0/exomiser-cli-12.1.0.jar --analysis ${yaml_file} --spring.config.location=${prop_file}       
     }
     output {
-        File out = '$path/output.tar.gz'
+        File out = '${base}.results.gz'
     }
 
     runtime {
@@ -70,10 +67,9 @@ workflow myWorkflow
     {
          File yaml_file
          File prop_file
-         File data_dir
     }
     call myTask 
     {
-         input: yaml_file=yaml_file, prop_file=prop_file, data_dir=data_dir 
+         input: yaml_file=yaml_file, prop_file=prop_file 
     }
 }
