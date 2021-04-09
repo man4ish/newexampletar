@@ -1,4 +1,5 @@
 {
-  "myWorkflow.yaml_file": "/Users/mkumar1/wdl/tar_example/exomiser/exomiser.yaml",
-  "myWorkflow.prop_file": "/Users/mkumar1/wdl/tar_example/exomiser/b38.application.properties"
+  "myWorkflow.yaml_file": "/Users/mkumar1/wdl/tar_example/exomiser.yaml",
+  "myWorkflow.prop_file": "/Users/mkumar1/wdl/tar_example/b38.application.properties",
+  "myWorkflow.data_dir": "/Users/mkumar1/wdl/tar_example/exomiser_input"
 }
