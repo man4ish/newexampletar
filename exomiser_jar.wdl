@@ -13,8 +13,9 @@ task myTask
     command {
         set -exo pipefail
         path=$(realpath ${data_dir})
-        #echo $(pwd)
+       
         mkdir -p $path/output
+        #mkdir -p '${base}_result'/output
 
         while IFS= read -r line
         do
@@ -33,6 +34,7 @@ task myTask
              oprefix_name_name="$(cut -d':' -f2 <<<"$line")"
              prefix_name=`echo $oprefix_name | sed 's/ *$//g'`
              echo "$oprefix: $path/"$prefix_fname"/output/result" >> '${base}.yaml.tmp'
+             #echo "$oprefix: ${base}_result/output/result" >> '${base}.yaml.tmp'
           else
              echo "$line" >> '${base}.yaml.tmp'
           fi
@@ -50,12 +52,14 @@ task myTask
         done < "${prop_file}"
                
         mv '${base}.tmp' '${prop_file}'
-        #path=$(realpath yaml_file)
+
         java -Xms2g -Xmx8g -jar /software/reboot-utils/exomiser-cli-12.1.0/exomiser-cli-12.1.0.jar --analysis ${yaml_file} --spring.config.location=${prop_file}
-        tar czvf $path/output.tar.gz $path/output       
+        tar czvf $path/output.tar.gz $path/output 
+        mkdir -p '${base}_result' 
+        cp $path/output.tar.gz '${base}_result/output.tar.gz' 
     }
     output {
-        File out = '$path/output.tar.gz'
+        File out = '${base}_result/output.tar.gz'
     }
 
     runtime {
