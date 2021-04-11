@@ -1,0 +1,5 @@
+{
+  "myWorkflow.yaml_file": "/Users/mkumar1/wdl/tar_example/jar_gz/exomiser.yaml",
+  "myWorkflow.prop_file": "/Users/mkumar1/wdl/tar_example/jar_gz/b38.application.properties",
+  "myWorkflow.tar_file": "/Users/mkumar1/wdl/tar_example/jar_gz/exomiser_input.tar.gz"
+}

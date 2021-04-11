@@ -1,3 +1,0 @@
-#!/bin/bash
-'/bin/bash' '/Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/60a959b6-b28c-47f5-a5fd-91eaa1f1da38/call-myTask/execution/script.submit' < /dev/null || { rc=$?; if [ "$rc" -gt "128" ]; then echo $rc; else echo -1; fi } > /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/60a959b6-b28c-47f5-a5fd-91eaa1f1da38/call-myTask/execution/rc &
-echo $!

@@ -1,0 +1,8 @@
+{
+  "myWorkflow.ped_file": "/Users/mkumar1/wdl/tar_example/exomiser_input/cmh003012-01.ped",
+  "myWorkflow.family_vcf": "/Users/mkumar1/wdl/tar_example/exomiser_input/cmh003012-01_family.vcf.gz",
+  "myWorkflow.yaml_file": "/Users/mkumar1/wdl/tar_example/exomiser_input/exomiser.yaml",
+  "myWorkflow.templatefile": "/Users/mkumar1/wdl/tar_example/exomiser_input/exomiser_genome_template_b38.yml",
+  "myWorkflow.prop_file": "/Users/mkumar1/wdl/tar_example/b38.application.properties",
+  "myWorkflow.data_dir": "/Users/mkumar1/wdl/tar_example/exomiser_input"
+}

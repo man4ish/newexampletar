@@ -26,8 +26,8 @@ def main(argv):
          for line in Lines:
              var = var + line
     with open(args.output_file, 'w') as o:
-         o.write("hello world\n")
-         o.write(var + "\n")
+         o.write("hello world test\n")
+         o.write(var.rstrip())
     
 
 if __name__ == "__main__":

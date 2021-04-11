@@ -101,7 +101,7 @@ workflow myWorkflow
          File templatefile
          File family_vcf
          File ped_file
-         File yaml_file
+         File yaml_file    
          File prop_file
          File data_dir
     }

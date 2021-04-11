@@ -1,0 +1,31 @@
+2021-04-10 00:05:21,178 INFO  - MaterializeWorkflowDescriptorActor [UUID(7b7c5849)]: Parsing workflow as WDL 1.0
+2021-04-10 00:05:21,776 INFO  - MaterializeWorkflowDescriptorActor [UUID(7b7c5849)]: Call-to-Backend assignments: myWorkflow.myTask2 -> Local, myWorkflow.myTask1 -> Local
+2021-04-10 00:05:21,910 WARN  - Local [UUID(7b7c5849)]: Key/s [memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+2021-04-10 00:05:24,075 INFO  - WorkflowExecutionActor-7b7c5849-becc-43c1-be4f-b1906543b4d5 [UUID(7b7c5849)]: Starting myWorkflow.myTask2, myWorkflow.myTask1
+2021-04-10 00:05:26,174 WARN  - BackgroundConfigAsyncJobExecutionActor [UUID(7b7c5849)myWorkflow.myTask2:NA:1]: Unrecognized runtime attribute keys: memory
+2021-04-10 00:05:26,226 INFO  - BackgroundConfigAsyncJobExecutionActor [UUID(7b7c5849)myWorkflow.myTask1:NA:1]: `set -exo pipefail
+path=$(realpath templatefile)
+echo $path 
+python3 /software/reboot-utils/reboot-utils-0.2.2.3/bin/exomiser_from_template.py -t /cromwell-executions/myWorkflow/7b7c5849-becc-43c1-be4f-b1906543b4d5/call-myTask1/inputs/328329245/exomiser_genome_template_b38.yml -v /cromwell-executions/myWorkflow/7b7c5849-becc-43c1-be4f-b1906543b4d5/call-myTask1/inputs/328329245/cmh003012-01_family.vcf.gz -p $path/result -o exomiser_genome_template_b38.yml.yaml -b cmh003012-01 -d /cromwell-executions/myWorkflow/7b7c5849-becc-43c1-be4f-b1906543b4d5/call-myTask1/inputs/328329245/cmh003012-01.ped`
+2021-04-10 00:05:26,263 INFO  - BackgroundConfigAsyncJobExecutionActor [UUID(7b7c5849)myWorkflow.myTask1:NA:1]: executing: # make sure there is no preexisting Docker CID file
+rm -f /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/7b7c5849-becc-43c1-be4f-b1906543b4d5/call-myTask1/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/7b7c5849-becc-43c1-be4f-b1906543b4d5/call-myTask1/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/7b7c5849-becc-43c1-be4f-b1906543b4d5/call-myTask1:/cromwell-executions/myWorkflow/7b7c5849-becc-43c1-be4f-b1906543b4d5/call-myTask1:delegated \
+  docker.io/man4ish/buildexomiser@sha256:c674c16a5306fafe0590561ce9a8add4079e3c199f9709c0323670387c9e6a50 /cromwell-executions/myWorkflow/7b7c5849-becc-43c1-be4f-b1906543b4d5/call-myTask1/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait `cat /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/7b7c5849-becc-43c1-be4f-b1906543b4d5/call-myTask1/execution/docker_cid`)
+
+# remove the container after waiting
+docker rm `cat /Users/mkumar1/wdl/tar_example/cromwell-executions/myWorkflow/7b7c5849-becc-43c1-be4f-b1906543b4d5/call-myTask1/execution/docker_cid`
+
+# return exit code
+exit $rc
+2021-04-10 00:05:30,973 INFO  - BackgroundConfigAsyncJobExecutionActor [UUID(7b7c5849)myWorkflow.myTask1:NA:1]: job id: 60723
+2021-04-10 00:05:30,977 INFO  - BackgroundConfigAsyncJobExecutionActor [UUID(7b7c5849)myWorkflow.myTask1:NA:1]: Status change from - to Done
+2021-04-10 00:06:20,740 INFO  - WorkflowExecutionActor-7b7c5849-becc-43c1-be4f-b1906543b4d5 [UUID(7b7c5849)]: Aborting workflow

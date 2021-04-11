@@ -1,0 +1,823 @@
+++ realpath /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/-223602523/exomiser_input
++ path=/cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/-223602523/exomiser_input
++ mkdir -p /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/-223602523/exomiser_input/output
++ IFS=
++ read -r line
++ [[ ## Exomiser Analysis Template. == *\v\c\f\:* ]]
++ [[ ## Exomiser Analysis Template. == *\p\e\d\:* ]]
++ [[ ## Exomiser Analysis Template. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '## Exomiser Analysis Template.'
++ IFS=
++ read -r line
++ [[ # These are all the possible options for running exomiser. Use this as a template for == *\v\c\f\:* ]]
++ [[ # These are all the possible options for running exomiser. Use this as a template for == *\p\e\d\:* ]]
++ [[ # These are all the possible options for running exomiser. Use this as a template for == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '# These are all the possible options for running exomiser. Use this as a template for'
++ IFS=
++ read -r line
++ [[ # your own set-up. == *\v\c\f\:* ]]
++ [[ # your own set-up. == *\p\e\d\:* ]]
++ [[ # your own set-up. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '# your own set-up.'
++ IFS=
++ read -r line
++ [[ --- == *\v\c\f\:* ]]
++ [[ --- == *\p\e\d\:* ]]
++ [[ --- == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo ---
++ IFS=
++ read -r line
++ [[ analysis: == *\v\c\f\:* ]]
++ [[ analysis: == *\p\e\d\:* ]]
++ [[ analysis: == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo analysis:
++ IFS=
++ read -r line
++ [[     # hg19 or hg38 - ensure that the application has been configured to run the specified assembly otherwise it will halt. == *\v\c\f\:* ]]
++ [[     # hg19 or hg38 - ensure that the application has been configured to run the specified assembly otherwise it will halt. == *\p\e\d\:* ]]
++ [[     # hg19 or hg38 - ensure that the application has been configured to run the specified assembly otherwise it will halt. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    # hg19 or hg38 - ensure that the application has been configured to run the specified assembly otherwise it will halt.'
++ IFS=
++ read -r line
++ [[     genomeAssembly: hg38 == *\v\c\f\:* ]]
++ [[     genomeAssembly: hg38 == *\p\e\d\:* ]]
++ [[     genomeAssembly: hg38 == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    genomeAssembly: hg38'
++ IFS=
++ read -r line
++ [[     vcf: cmh003012-01_family.vcf.gz == *\v\c\f\:* ]]
+++ cut -d: -f1
++ vcf='    vcf'
+++ cut -d: -f2
++ vcf_fname=' cmh003012-01_family.vcf.gz'
+++ echo cmh003012-01_family.vcf.gz
+++ sed 's/ *$//g'
++ vcf_name=cmh003012-01_family.vcf.gz
++ echo '    vcf: /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/-223602523/exomiser_input/cmh003012-01_family.vcf.gz'
++ IFS=
++ read -r line
++ [[     ped: cmh003012-01.ped == *\v\c\f\:* ]]
++ [[     ped: cmh003012-01.ped == *\p\e\d\:* ]]
+++ cut -d: -f1
++ ped='    ped'
+++ cut -d: -f2
++ ped_name=' cmh003012-01.ped'
+++ echo cmh003012-01.ped
+++ sed 's/ *$//g'
++ ped_fname=cmh003012-01.ped
++ echo '    ped: /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/-223602523/exomiser_input/cmh003012-01.ped'
++ IFS=
++ read -r line
++ [[     proband: cmh003012-01 == *\v\c\f\:* ]]
++ [[     proband: cmh003012-01 == *\p\e\d\:* ]]
++ [[     proband: cmh003012-01 == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    proband: cmh003012-01'
++ IFS=
++ read -r line
++ [[     hpoIds: ['HP:0030692', 'HP:0000805', 'HP:0011968', 'HP:0001288', 'HP:0001257'] == *\v\c\f\:* ]]
++ [[     hpoIds: ['HP:0030692', 'HP:0000805', 'HP:0011968', 'HP:0001288', 'HP:0001257'] == *\p\e\d\:* ]]
++ [[     hpoIds: ['HP:0030692', 'HP:0000805', 'HP:0011968', 'HP:0001288', 'HP:0001257'] == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    hpoIds: ['\''HP:0030692'\'', '\''HP:0000805'\'', '\''HP:0011968'\'', '\''HP:0001288'\'', '\''HP:0001257'\'']'
++ IFS=
++ read -r line
++ [[     # These are the default settings, with values representing the maximum minor allele frequency in percent (%) permitted for an == *\v\c\f\:* ]]
++ [[     # These are the default settings, with values representing the maximum minor allele frequency in percent (%) permitted for an == *\p\e\d\:* ]]
++ [[     # These are the default settings, with values representing the maximum minor allele frequency in percent (%) permitted for an == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    # These are the default settings, with values representing the maximum minor allele frequency in percent (%) permitted for an'
++ IFS=
++ read -r line
++ [[     # allele to be considered as a causative candidate under that mode of inheritance. == *\v\c\f\:* ]]
++ [[     # allele to be considered as a causative candidate under that mode of inheritance. == *\p\e\d\:* ]]
++ [[     # allele to be considered as a causative candidate under that mode of inheritance. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    # allele to be considered as a causative candidate under that mode of inheritance.'
++ IFS=
++ read -r line
++ [[     # If you just want to analyse a sample under a single inheritance mode, delete/comment-out the others. For AUTOSOMAL_RECESSIVE == *\v\c\f\:* ]]
++ [[     # If you just want to analyse a sample under a single inheritance mode, delete/comment-out the others. For AUTOSOMAL_RECESSIVE == *\p\e\d\:* ]]
++ [[     # If you just want to analyse a sample under a single inheritance mode, delete/comment-out the others. For AUTOSOMAL_RECESSIVE == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    # If you just want to analyse a sample under a single inheritance mode, delete/comment-out the others. For AUTOSOMAL_RECESSIVE'
++ IFS=
++ read -r line
++ [[     # or X_RECESSIVE ensure *both* relevant HOM_ALT and COMP_HET modes are present. == *\v\c\f\:* ]]
++ [[     # or X_RECESSIVE ensure *both* relevant HOM_ALT and COMP_HET modes are present. == *\p\e\d\:* ]]
++ [[     # or X_RECESSIVE ensure *both* relevant HOM_ALT and COMP_HET modes are present. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    # or X_RECESSIVE ensure *both* relevant HOM_ALT and COMP_HET modes are present.'
++ IFS=
++ read -r line
++ [[     # In cases where you do not want any cut-offs applied an empty map should be used e.g. inheritanceModes: {} == *\v\c\f\:* ]]
++ [[     # In cases where you do not want any cut-offs applied an empty map should be used e.g. inheritanceModes: {} == *\p\e\d\:* ]]
++ [[     # In cases where you do not want any cut-offs applied an empty map should be used e.g. inheritanceModes: {} == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    # In cases where you do not want any cut-offs applied an empty map should be used e.g. inheritanceModes: {}'
++ IFS=
++ read -r line
++ [[     inheritanceModes: { == *\v\c\f\:* ]]
++ [[     inheritanceModes: { == *\p\e\d\:* ]]
++ [[     inheritanceModes: { == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    inheritanceModes: {'
++ IFS=
++ read -r line
++ [[             AUTOSOMAL_DOMINANT: 0.1, == *\v\c\f\:* ]]
++ [[             AUTOSOMAL_DOMINANT: 0.1, == *\p\e\d\:* ]]
++ [[             AUTOSOMAL_DOMINANT: 0.1, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '            AUTOSOMAL_DOMINANT: 0.1,'
++ IFS=
++ read -r line
++ [[             AUTOSOMAL_RECESSIVE_HOM_ALT: 0.1, == *\v\c\f\:* ]]
++ [[             AUTOSOMAL_RECESSIVE_HOM_ALT: 0.1, == *\p\e\d\:* ]]
++ [[             AUTOSOMAL_RECESSIVE_HOM_ALT: 0.1, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '            AUTOSOMAL_RECESSIVE_HOM_ALT: 0.1,'
++ IFS=
++ read -r line
++ [[             AUTOSOMAL_RECESSIVE_COMP_HET: 2.0, == *\v\c\f\:* ]]
++ [[             AUTOSOMAL_RECESSIVE_COMP_HET: 2.0, == *\p\e\d\:* ]]
++ [[             AUTOSOMAL_RECESSIVE_COMP_HET: 2.0, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '            AUTOSOMAL_RECESSIVE_COMP_HET: 2.0,'
++ IFS=
++ read -r line
++ [[             X_DOMINANT: 0.1, == *\v\c\f\:* ]]
++ [[             X_DOMINANT: 0.1, == *\p\e\d\:* ]]
++ [[             X_DOMINANT: 0.1, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '            X_DOMINANT: 0.1,'
++ IFS=
++ read -r line
++ [[             X_RECESSIVE_HOM_ALT: 0.1, == *\v\c\f\:* ]]
++ [[             X_RECESSIVE_HOM_ALT: 0.1, == *\p\e\d\:* ]]
++ [[             X_RECESSIVE_HOM_ALT: 0.1, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '            X_RECESSIVE_HOM_ALT: 0.1,'
++ IFS=
++ read -r line
++ [[             X_RECESSIVE_COMP_HET: 2.0, == *\v\c\f\:* ]]
++ [[             X_RECESSIVE_COMP_HET: 2.0, == *\p\e\d\:* ]]
++ [[             X_RECESSIVE_COMP_HET: 2.0, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '            X_RECESSIVE_COMP_HET: 2.0,'
++ IFS=
++ read -r line
++ [[             MITOCHONDRIAL: 0.2 == *\v\c\f\:* ]]
++ [[             MITOCHONDRIAL: 0.2 == *\p\e\d\:* ]]
++ [[             MITOCHONDRIAL: 0.2 == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '            MITOCHONDRIAL: 0.2'
++ IFS=
++ read -r line
++ [[     } == *\v\c\f\:* ]]
++ [[     } == *\p\e\d\:* ]]
++ [[     } == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    }'
++ IFS=
++ read -r line
++ [[     #FULL, SPARSE or PASS_ONLY == *\v\c\f\:* ]]
++ [[     #FULL, SPARSE or PASS_ONLY == *\p\e\d\:* ]]
++ [[     #FULL, SPARSE or PASS_ONLY == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #FULL, SPARSE or PASS_ONLY'
++ IFS=
++ read -r line
++ [[     analysisMode: PASS_ONLY == *\v\c\f\:* ]]
++ [[     analysisMode: PASS_ONLY == *\p\e\d\:* ]]
++ [[     analysisMode: PASS_ONLY == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    analysisMode: PASS_ONLY'
++ IFS=
++ read -r line
++ [[     #Possible frequencySources: == *\v\c\f\:* ]]
++ [[     #Possible frequencySources: == *\p\e\d\:* ]]
++ [[     #Possible frequencySources: == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #Possible frequencySources:'
++ IFS=
++ read -r line
++ [[     #Thousand Genomes project http://www.1000genomes.org/ == *\v\c\f\:* ]]
++ [[     #Thousand Genomes project http://www.1000genomes.org/ == *\p\e\d\:* ]]
++ [[     #Thousand Genomes project http://www.1000genomes.org/ == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #Thousand Genomes project http://www.1000genomes.org/'
++ IFS=
++ read -r line
++ [[     #   THOUSAND_GENOMES, == *\v\c\f\:* ]]
++ [[     #   THOUSAND_GENOMES, == *\p\e\d\:* ]]
++ [[     #   THOUSAND_GENOMES, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   THOUSAND_GENOMES,'
++ IFS=
++ read -r line
++ [[     #ESP project http://evs.gs.washington.edu/EVS/ == *\v\c\f\:* ]]
++ [[     #ESP project http://evs.gs.washington.edu/EVS/ == *\p\e\d\:* ]]
++ [[     #ESP project http://evs.gs.washington.edu/EVS/ == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #ESP project http://evs.gs.washington.edu/EVS/'
++ IFS=
++ read -r line
++ [[     #   ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL, == *\v\c\f\:* ]]
++ [[     #   ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL, == *\p\e\d\:* ]]
++ [[     #   ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL,'
++ IFS=
++ read -r line
++ [[     #ExAC project http://exac.broadinstitute.org/about == *\v\c\f\:* ]]
++ [[     #ExAC project http://exac.broadinstitute.org/about == *\p\e\d\:* ]]
++ [[     #ExAC project http://exac.broadinstitute.org/about == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #ExAC project http://exac.broadinstitute.org/about'
++ IFS=
++ read -r line
++ [[     #   EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN, == *\v\c\f\:* ]]
++ [[     #   EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN, == *\p\e\d\:* ]]
++ [[     #   EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN,'
++ IFS=
++ read -r line
++ [[     #   EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN, == *\v\c\f\:* ]]
++ [[     #   EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN, == *\p\e\d\:* ]]
++ [[     #   EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN,'
++ IFS=
++ read -r line
++ [[     #   EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN, == *\v\c\f\:* ]]
++ [[     #   EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN, == *\p\e\d\:* ]]
++ [[     #   EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN,'
++ IFS=
++ read -r line
++ [[     #   EXAC_OTHER == *\v\c\f\:* ]]
++ [[     #   EXAC_OTHER == *\p\e\d\:* ]]
++ [[     #   EXAC_OTHER == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   EXAC_OTHER'
++ IFS=
++ read -r line
++ [[     #Possible frequencySources: == *\v\c\f\:* ]]
++ [[     #Possible frequencySources: == *\p\e\d\:* ]]
++ [[     #Possible frequencySources: == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #Possible frequencySources:'
++ IFS=
++ read -r line
++ [[     #Thousand Genomes project - http://www.1000genomes.org/ (THOUSAND_GENOMES) == *\v\c\f\:* ]]
++ [[     #Thousand Genomes project - http://www.1000genomes.org/ (THOUSAND_GENOMES) == *\p\e\d\:* ]]
++ [[     #Thousand Genomes project - http://www.1000genomes.org/ (THOUSAND_GENOMES) == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #Thousand Genomes project - http://www.1000genomes.org/ (THOUSAND_GENOMES)'
++ IFS=
++ read -r line
++ [[     #TOPMed - https://www.nhlbi.nih.gov/science/precision-medicine-activities (TOPMED) == *\v\c\f\:* ]]
++ [[     #TOPMed - https://www.nhlbi.nih.gov/science/precision-medicine-activities (TOPMED) == *\p\e\d\:* ]]
++ [[     #TOPMed - https://www.nhlbi.nih.gov/science/precision-medicine-activities (TOPMED) == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #TOPMed - https://www.nhlbi.nih.gov/science/precision-medicine-activities (TOPMED)'
++ IFS=
++ read -r line
++ [[     #UK10K - http://www.uk10k.org/ (UK10K) == *\v\c\f\:* ]]
++ [[     #UK10K - http://www.uk10k.org/ (UK10K) == *\p\e\d\:* ]]
++ [[     #UK10K - http://www.uk10k.org/ (UK10K) == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #UK10K - http://www.uk10k.org/ (UK10K)'
++ IFS=
++ read -r line
++ [[     #ESP project - http://evs.gs.washington.edu/EVS/ (ESP_) == *\v\c\f\:* ]]
++ [[     #ESP project - http://evs.gs.washington.edu/EVS/ (ESP_) == *\p\e\d\:* ]]
++ [[     #ESP project - http://evs.gs.washington.edu/EVS/ (ESP_) == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #ESP project - http://evs.gs.washington.edu/EVS/ (ESP_)'
++ IFS=
++ read -r line
++ [[     #   ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL, == *\v\c\f\:* ]]
++ [[     #   ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL, == *\p\e\d\:* ]]
++ [[     #   ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL,'
++ IFS=
++ read -r line
++ [[     #ExAC project http://exac.broadinstitute.org/about (EXAC_) == *\v\c\f\:* ]]
++ [[     #ExAC project http://exac.broadinstitute.org/about (EXAC_) == *\p\e\d\:* ]]
++ [[     #ExAC project http://exac.broadinstitute.org/about (EXAC_) == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #ExAC project http://exac.broadinstitute.org/about (EXAC_)'
++ IFS=
++ read -r line
++ [[     #   EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN, == *\v\c\f\:* ]]
++ [[     #   EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN, == *\p\e\d\:* ]]
++ [[     #   EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN,'
++ IFS=
++ read -r line
++ [[     #   EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN, == *\v\c\f\:* ]]
++ [[     #   EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN, == *\p\e\d\:* ]]
++ [[     #   EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN,'
++ IFS=
++ read -r line
++ [[     #   EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN, == *\v\c\f\:* ]]
++ [[     #   EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN, == *\p\e\d\:* ]]
++ [[     #   EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN,'
++ IFS=
++ read -r line
++ [[     #   EXAC_OTHER == *\v\c\f\:* ]]
++ [[     #   EXAC_OTHER == *\p\e\d\:* ]]
++ [[     #   EXAC_OTHER == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #   EXAC_OTHER'
++ IFS=
++ read -r line
++ [[     #gnomAD - http://gnomad.broadinstitute.org/ (GNOMAD_E, GNOMAD_G) == *\v\c\f\:* ]]
++ [[     #gnomAD - http://gnomad.broadinstitute.org/ (GNOMAD_E, GNOMAD_G) == *\p\e\d\:* ]]
++ [[     #gnomAD - http://gnomad.broadinstitute.org/ (GNOMAD_E, GNOMAD_G) == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #gnomAD - http://gnomad.broadinstitute.org/ (GNOMAD_E, GNOMAD_G)'
++ IFS=
++ read -r line
++ [[     frequencySources: [ == *\v\c\f\:* ]]
++ [[     frequencySources: [ == *\p\e\d\:* ]]
++ [[     frequencySources: [ == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    frequencySources: ['
++ IFS=
++ read -r line
++ [[         THOUSAND_GENOMES, == *\v\c\f\:* ]]
++ [[         THOUSAND_GENOMES, == *\p\e\d\:* ]]
++ [[         THOUSAND_GENOMES, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        THOUSAND_GENOMES,'
++ IFS=
++ read -r line
++ [[         TOPMED, == *\v\c\f\:* ]]
++ [[         TOPMED, == *\p\e\d\:* ]]
++ [[         TOPMED, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        TOPMED,'
++ IFS=
++ read -r line
++ [[         UK10K, == *\v\c\f\:* ]]
++ [[         UK10K, == *\p\e\d\:* ]]
++ [[         UK10K, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        UK10K,'
++ IFS=
++ read -r line
++ [[ '' == *\v\c\f\:* ]]
++ [[ '' == *\p\e\d\:* ]]
++ [[ '' == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo ''
++ IFS=
++ read -r line
++ [[         ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL, == *\v\c\f\:* ]]
++ [[         ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL, == *\p\e\d\:* ]]
++ [[         ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        ESP_AFRICAN_AMERICAN, ESP_EUROPEAN_AMERICAN, ESP_ALL,'
++ IFS=
++ read -r line
++ [[ '' == *\v\c\f\:* ]]
++ [[ '' == *\p\e\d\:* ]]
++ [[ '' == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo ''
++ IFS=
++ read -r line
++ [[         EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN, == *\v\c\f\:* ]]
++ [[         EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN, == *\p\e\d\:* ]]
++ [[         EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        EXAC_AFRICAN_INC_AFRICAN_AMERICAN, EXAC_AMERICAN,'
++ IFS=
++ read -r line
++ [[         EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN, == *\v\c\f\:* ]]
++ [[         EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN, == *\p\e\d\:* ]]
++ [[         EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        EXAC_SOUTH_ASIAN, EXAC_EAST_ASIAN,'
++ IFS=
++ read -r line
++ [[         EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN, == *\v\c\f\:* ]]
++ [[         EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN, == *\p\e\d\:* ]]
++ [[         EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        EXAC_FINNISH, EXAC_NON_FINNISH_EUROPEAN,'
++ IFS=
++ read -r line
++ [[         EXAC_OTHER, == *\v\c\f\:* ]]
++ [[         EXAC_OTHER, == *\p\e\d\:* ]]
++ [[         EXAC_OTHER, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        EXAC_OTHER,'
++ IFS=
++ read -r line
++ [[ '' == *\v\c\f\:* ]]
++ [[ '' == *\p\e\d\:* ]]
++ [[ '' == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo ''
++ IFS=
++ read -r line
++ [[         GNOMAD_E_AFR, == *\v\c\f\:* ]]
++ [[         GNOMAD_E_AFR, == *\p\e\d\:* ]]
++ [[         GNOMAD_E_AFR, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_E_AFR,'
++ IFS=
++ read -r line
++ [[         GNOMAD_E_AMR, == *\v\c\f\:* ]]
++ [[         GNOMAD_E_AMR, == *\p\e\d\:* ]]
++ [[         GNOMAD_E_AMR, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_E_AMR,'
++ IFS=
++ read -r line
++ [[ #        GNOMAD_E_ASJ, == *\v\c\f\:* ]]
++ [[ #        GNOMAD_E_ASJ, == *\p\e\d\:* ]]
++ [[ #        GNOMAD_E_ASJ, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '#        GNOMAD_E_ASJ,'
++ IFS=
++ read -r line
++ [[         GNOMAD_E_EAS, == *\v\c\f\:* ]]
++ [[         GNOMAD_E_EAS, == *\p\e\d\:* ]]
++ [[         GNOMAD_E_EAS, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_E_EAS,'
++ IFS=
++ read -r line
++ [[         GNOMAD_E_FIN, == *\v\c\f\:* ]]
++ [[         GNOMAD_E_FIN, == *\p\e\d\:* ]]
++ [[         GNOMAD_E_FIN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_E_FIN,'
++ IFS=
++ read -r line
++ [[         GNOMAD_E_NFE, == *\v\c\f\:* ]]
++ [[         GNOMAD_E_NFE, == *\p\e\d\:* ]]
++ [[         GNOMAD_E_NFE, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_E_NFE,'
++ IFS=
++ read -r line
++ [[         GNOMAD_E_OTH, == *\v\c\f\:* ]]
++ [[         GNOMAD_E_OTH, == *\p\e\d\:* ]]
++ [[         GNOMAD_E_OTH, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_E_OTH,'
++ IFS=
++ read -r line
++ [[         GNOMAD_E_SAS, == *\v\c\f\:* ]]
++ [[         GNOMAD_E_SAS, == *\p\e\d\:* ]]
++ [[         GNOMAD_E_SAS, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_E_SAS,'
++ IFS=
++ read -r line
++ [[ '' == *\v\c\f\:* ]]
++ [[ '' == *\p\e\d\:* ]]
++ [[ '' == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo ''
++ IFS=
++ read -r line
++ [[         GNOMAD_G_AFR, == *\v\c\f\:* ]]
++ [[         GNOMAD_G_AFR, == *\p\e\d\:* ]]
++ [[         GNOMAD_G_AFR, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_G_AFR,'
++ IFS=
++ read -r line
++ [[         GNOMAD_G_AMR, == *\v\c\f\:* ]]
++ [[         GNOMAD_G_AMR, == *\p\e\d\:* ]]
++ [[         GNOMAD_G_AMR, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_G_AMR,'
++ IFS=
++ read -r line
++ [[ #        GNOMAD_G_ASJ, == *\v\c\f\:* ]]
++ [[ #        GNOMAD_G_ASJ, == *\p\e\d\:* ]]
++ [[ #        GNOMAD_G_ASJ, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '#        GNOMAD_G_ASJ,'
++ IFS=
++ read -r line
++ [[         GNOMAD_G_EAS, == *\v\c\f\:* ]]
++ [[         GNOMAD_G_EAS, == *\p\e\d\:* ]]
++ [[         GNOMAD_G_EAS, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_G_EAS,'
++ IFS=
++ read -r line
++ [[         GNOMAD_G_FIN, == *\v\c\f\:* ]]
++ [[         GNOMAD_G_FIN, == *\p\e\d\:* ]]
++ [[         GNOMAD_G_FIN, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_G_FIN,'
++ IFS=
++ read -r line
++ [[         GNOMAD_G_NFE, == *\v\c\f\:* ]]
++ [[         GNOMAD_G_NFE, == *\p\e\d\:* ]]
++ [[         GNOMAD_G_NFE, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_G_NFE,'
++ IFS=
++ read -r line
++ [[         GNOMAD_G_OTH, == *\v\c\f\:* ]]
++ [[         GNOMAD_G_OTH, == *\p\e\d\:* ]]
++ [[         GNOMAD_G_OTH, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_G_OTH,'
++ IFS=
++ read -r line
++ [[         GNOMAD_G_SAS == *\v\c\f\:* ]]
++ [[         GNOMAD_G_SAS == *\p\e\d\:* ]]
++ [[         GNOMAD_G_SAS == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        GNOMAD_G_SAS'
++ IFS=
++ read -r line
++ [[     ] == *\v\c\f\:* ]]
++ [[     ] == *\p\e\d\:* ]]
++ [[     ] == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    ]'
++ IFS=
++ read -r line
++ [[     #Possible pathogenicitySources: POLYPHEN, MUTATION_TASTER, SIFT, CADD, REMM == *\v\c\f\:* ]]
++ [[     #Possible pathogenicitySources: POLYPHEN, MUTATION_TASTER, SIFT, CADD, REMM == *\p\e\d\:* ]]
++ [[     #Possible pathogenicitySources: POLYPHEN, MUTATION_TASTER, SIFT, CADD, REMM == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #Possible pathogenicitySources: POLYPHEN, MUTATION_TASTER, SIFT, CADD, REMM'
++ IFS=
++ read -r line
++ [[     #REMM is trained on non-coding regulatory regions == *\v\c\f\:* ]]
++ [[     #REMM is trained on non-coding regulatory regions == *\p\e\d\:* ]]
++ [[     #REMM is trained on non-coding regulatory regions == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #REMM is trained on non-coding regulatory regions'
++ IFS=
++ read -r line
++ [[     #*WARNING* if you enable CADD or REMM ensure that you have downloaded and installed the CADD/REMM tabix files == *\v\c\f\:* ]]
++ [[     #*WARNING* if you enable CADD or REMM ensure that you have downloaded and installed the CADD/REMM tabix files == *\p\e\d\:* ]]
++ [[     #*WARNING* if you enable CADD or REMM ensure that you have downloaded and installed the CADD/REMM tabix files == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #*WARNING* if you enable CADD or REMM ensure that you have downloaded and installed the CADD/REMM tabix files'
++ IFS=
++ read -r line
++ [[     #and updated their location in the application.properties. Exomiser will not run without this. == *\v\c\f\:* ]]
++ [[     #and updated their location in the application.properties. Exomiser will not run without this. == *\p\e\d\:* ]]
++ [[     #and updated their location in the application.properties. Exomiser will not run without this. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #and updated their location in the application.properties. Exomiser will not run without this.'
++ IFS=
++ read -r line
++ [[     pathogenicitySources: [POLYPHEN, MUTATION_TASTER, SIFT] == *\v\c\f\:* ]]
++ [[     pathogenicitySources: [POLYPHEN, MUTATION_TASTER, SIFT] == *\p\e\d\:* ]]
++ [[     pathogenicitySources: [POLYPHEN, MUTATION_TASTER, SIFT] == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    pathogenicitySources: [POLYPHEN, MUTATION_TASTER, SIFT]'
++ IFS=
++ read -r line
++ [[     #this is the standard exomiser order. == *\v\c\f\:* ]]
++ [[     #this is the standard exomiser order. == *\p\e\d\:* ]]
++ [[     #this is the standard exomiser order. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #this is the standard exomiser order.'
++ IFS=
++ read -r line
++ [[     #all steps are optional == *\v\c\f\:* ]]
++ [[     #all steps are optional == *\p\e\d\:* ]]
++ [[     #all steps are optional == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #all steps are optional'
++ IFS=
++ read -r line
++ [[     steps: [ == *\v\c\f\:* ]]
++ [[     steps: [ == *\p\e\d\:* ]]
++ [[     steps: [ == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    steps: ['
++ IFS=
++ read -r line
++ [[         #intervalFilter: {interval: 'chr10:123256200-123256300'}, == *\v\c\f\:* ]]
++ [[         #intervalFilter: {interval: 'chr10:123256200-123256300'}, == *\p\e\d\:* ]]
++ [[         #intervalFilter: {interval: 'chr10:123256200-123256300'}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #intervalFilter: {interval: '\''chr10:123256200-123256300'\''},'
++ IFS=
++ read -r line
++ [[         # or for multiple intervals: == *\v\c\f\:* ]]
++ [[         # or for multiple intervals: == *\p\e\d\:* ]]
++ [[         # or for multiple intervals: == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        # or for multiple intervals:'
++ IFS=
++ read -r line
++ [[         #intervalFilter: {intervals: ['chr10:123256200-123256300', 'chr10:123256290-123256350']}, == *\v\c\f\:* ]]
++ [[         #intervalFilter: {intervals: ['chr10:123256200-123256300', 'chr10:123256290-123256350']}, == *\p\e\d\:* ]]
++ [[         #intervalFilter: {intervals: ['chr10:123256200-123256300', 'chr10:123256290-123256350']}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #intervalFilter: {intervals: ['\''chr10:123256200-123256300'\'', '\''chr10:123256290-123256350'\'']},'
++ IFS=
++ read -r line
++ [[         # or using a BED file - NOTE this should be 0-based, Exomiser otherwise uses 1-based coordinates in line with VCF == *\v\c\f\:* ]]
++ [[         # or using a BED file - NOTE this should be 0-based, Exomiser otherwise uses 1-based coordinates in line with VCF == *\p\e\d\:* ]]
++ [[         # or using a BED file - NOTE this should be 0-based, Exomiser otherwise uses 1-based coordinates in line with VCF == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        # or using a BED file - NOTE this should be 0-based, Exomiser otherwise uses 1-based coordinates in line with VCF'
++ IFS=
++ read -r line
++ [[         #intervalFilter: {bed: "/home/jjjohnston/projects/exomiser/intervals/xgen-exome-research-panel-targets.genes.bed"}, == *\v\c\f\:* ]]
++ [[         #intervalFilter: {bed: "/home/jjjohnston/projects/exomiser/intervals/xgen-exome-research-panel-targets.genes.bed"}, == *\p\e\d\:* ]]
++ [[         #intervalFilter: {bed: "/home/jjjohnston/projects/exomiser/intervals/xgen-exome-research-panel-targets.genes.bed"}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #intervalFilter: {bed: "/home/jjjohnston/projects/exomiser/intervals/xgen-exome-research-panel-targets.genes.bed"},'
++ IFS=
++ read -r line
++ [[         #genePanelFilter: {geneSymbols: ['FGFR1','FGFR2']}, == *\v\c\f\:* ]]
++ [[         #genePanelFilter: {geneSymbols: ['FGFR1','FGFR2']}, == *\p\e\d\:* ]]
++ [[         #genePanelFilter: {geneSymbols: ['FGFR1','FGFR2']}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #genePanelFilter: {geneSymbols: ['\''FGFR1'\'','\''FGFR2'\'']},'
++ IFS=
++ read -r line
++ [[         #failedVariantFilter: {}, == *\v\c\f\:* ]]
++ [[         #failedVariantFilter: {}, == *\p\e\d\:* ]]
++ [[         #failedVariantFilter: {}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #failedVariantFilter: {},'
++ IFS=
++ read -r line
++ [[         #qualityFilter: {minQuality: 50.0}, == *\v\c\f\:* ]]
++ [[         #qualityFilter: {minQuality: 50.0}, == *\p\e\d\:* ]]
++ [[         #qualityFilter: {minQuality: 50.0}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #qualityFilter: {minQuality: 50.0},'
++ IFS=
++ read -r line
++ [[         hiPhivePrioritiser: {}, == *\v\c\f\:* ]]
++ [[         hiPhivePrioritiser: {}, == *\p\e\d\:* ]]
++ [[         hiPhivePrioritiser: {}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        hiPhivePrioritiser: {},'
++ IFS=
++ read -r line
++ [[         priorityScoreFilter: {priorityType: HIPHIVE_PRIORITY, minPriorityScore: 0.501}, == *\v\c\f\:* ]]
++ [[         priorityScoreFilter: {priorityType: HIPHIVE_PRIORITY, minPriorityScore: 0.501}, == *\p\e\d\:* ]]
++ [[         priorityScoreFilter: {priorityType: HIPHIVE_PRIORITY, minPriorityScore: 0.501}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        priorityScoreFilter: {priorityType: HIPHIVE_PRIORITY, minPriorityScore: 0.501},'
++ IFS=
++ read -r line
++ [[         #knownVariantFilter: {}, #removes variants represented in the database == *\v\c\f\:* ]]
++ [[         #knownVariantFilter: {}, #removes variants represented in the database == *\p\e\d\:* ]]
++ [[         #knownVariantFilter: {}, #removes variants represented in the database == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #knownVariantFilter: {}, #removes variants represented in the database'
++ IFS=
++ read -r line
++ [[         regulatoryFeatureFilter: {}, == *\v\c\f\:* ]]
++ [[         regulatoryFeatureFilter: {}, == *\p\e\d\:* ]]
++ [[         regulatoryFeatureFilter: {}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        regulatoryFeatureFilter: {},'
++ IFS=
++ read -r line
++ [[         frequencyFilter: {maxFrequency: 1.0}, == *\v\c\f\:* ]]
++ [[         frequencyFilter: {maxFrequency: 1.0}, == *\p\e\d\:* ]]
++ [[         frequencyFilter: {maxFrequency: 1.0}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        frequencyFilter: {maxFrequency: 1.0},'
++ IFS=
++ read -r line
++ [[         pathogenicityFilter: {keepNonPathogenic: true}, == *\v\c\f\:* ]]
++ [[         pathogenicityFilter: {keepNonPathogenic: true}, == *\p\e\d\:* ]]
++ [[         pathogenicityFilter: {keepNonPathogenic: true}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        pathogenicityFilter: {keepNonPathogenic: true},'
++ IFS=
++ read -r line
++ [[         #inheritanceFilter and omimPrioritiser should always run AFTER all other filters have completed == *\v\c\f\:* ]]
++ [[         #inheritanceFilter and omimPrioritiser should always run AFTER all other filters have completed == *\p\e\d\:* ]]
++ [[         #inheritanceFilter and omimPrioritiser should always run AFTER all other filters have completed == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #inheritanceFilter and omimPrioritiser should always run AFTER all other filters have completed'
++ IFS=
++ read -r line
++ [[         #they will analyse genes according to the specified modeOfInheritance above- UNDEFINED will not be analysed. == *\v\c\f\:* ]]
++ [[         #they will analyse genes according to the specified modeOfInheritance above- UNDEFINED will not be analysed. == *\p\e\d\:* ]]
++ [[         #they will analyse genes according to the specified modeOfInheritance above- UNDEFINED will not be analysed. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #they will analyse genes according to the specified modeOfInheritance above- UNDEFINED will not be analysed.'
++ IFS=
++ read -r line
++ [[         inheritanceFilter: {}, == *\v\c\f\:* ]]
++ [[         inheritanceFilter: {}, == *\p\e\d\:* ]]
++ [[         inheritanceFilter: {}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        inheritanceFilter: {},'
++ IFS=
++ read -r line
++ [[         #omimPrioritiser isn't mandatory. == *\v\c\f\:* ]]
++ [[         #omimPrioritiser isn't mandatory. == *\p\e\d\:* ]]
++ [[         #omimPrioritiser isn't mandatory. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #omimPrioritiser isn'\''t mandatory.'
++ IFS=
++ read -r line
++ [[         omimPrioritiser: {}, == *\v\c\f\:* ]]
++ [[         omimPrioritiser: {}, == *\p\e\d\:* ]]
++ [[         omimPrioritiser: {}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        omimPrioritiser: {},'
++ IFS=
++ read -r line
++ [[         #priorityScoreFilter: {minPriorityScore: 0.4}, == *\v\c\f\:* ]]
++ [[         #priorityScoreFilter: {minPriorityScore: 0.4}, == *\p\e\d\:* ]]
++ [[         #priorityScoreFilter: {minPriorityScore: 0.4}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #priorityScoreFilter: {minPriorityScore: 0.4},'
++ IFS=
++ read -r line
++ [[         #Other prioritisers: Only combine omimPrioritiser with one of these. == *\v\c\f\:* ]]
++ [[         #Other prioritisers: Only combine omimPrioritiser with one of these. == *\p\e\d\:* ]]
++ [[         #Other prioritisers: Only combine omimPrioritiser with one of these. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #Other prioritisers: Only combine omimPrioritiser with one of these.'
++ IFS=
++ read -r line
++ [[         #Don't include any if you only want to filter the variants. == *\v\c\f\:* ]]
++ [[         #Don't include any if you only want to filter the variants. == *\p\e\d\:* ]]
++ [[         #Don't include any if you only want to filter the variants. == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #Don'\''t include any if you only want to filter the variants.'
++ IFS=
++ read -r line
++ [[         # or run hiPhive in benchmarking mode: == *\v\c\f\:* ]]
++ [[         # or run hiPhive in benchmarking mode: == *\p\e\d\:* ]]
++ [[         # or run hiPhive in benchmarking mode: == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        # or run hiPhive in benchmarking mode:'
++ IFS=
++ read -r line
++ [[         #hiPhivePrioritiser: {runParams: 'mouse'}, == *\v\c\f\:* ]]
++ [[         #hiPhivePrioritiser: {runParams: 'mouse'}, == *\p\e\d\:* ]]
++ [[         #hiPhivePrioritiser: {runParams: 'mouse'}, == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #hiPhivePrioritiser: {runParams: '\''mouse'\''},'
++ IFS=
++ read -r line
++ [[         #phivePrioritiser: {} == *\v\c\f\:* ]]
++ [[         #phivePrioritiser: {} == *\p\e\d\:* ]]
++ [[         #phivePrioritiser: {} == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #phivePrioritiser: {}'
++ IFS=
++ read -r line
++ [[         #phenixPrioritiser: {} == *\v\c\f\:* ]]
++ [[         #phenixPrioritiser: {} == *\p\e\d\:* ]]
++ [[         #phenixPrioritiser: {} == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #phenixPrioritiser: {}'
++ IFS=
++ read -r line
++ [[         #exomeWalkerPrioritiser: {seedGeneIds: [11111, 22222, 33333]} == *\v\c\f\:* ]]
++ [[         #exomeWalkerPrioritiser: {seedGeneIds: [11111, 22222, 33333]} == *\p\e\d\:* ]]
++ [[         #exomeWalkerPrioritiser: {seedGeneIds: [11111, 22222, 33333]} == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '        #exomeWalkerPrioritiser: {seedGeneIds: [11111, 22222, 33333]}'
++ IFS=
++ read -r line
++ [[     ] == *\v\c\f\:* ]]
++ [[     ] == *\p\e\d\:* ]]
++ [[     ] == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    ]'
++ IFS=
++ read -r line
++ [[ outputOptions: == *\v\c\f\:* ]]
++ [[ outputOptions: == *\p\e\d\:* ]]
++ [[ outputOptions: == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo outputOptions:
++ IFS=
++ read -r line
++ [[     outputPassVariantsOnly: false == *\v\c\f\:* ]]
++ [[     outputPassVariantsOnly: false == *\p\e\d\:* ]]
++ [[     outputPassVariantsOnly: false == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    outputPassVariantsOnly: false'
++ IFS=
++ read -r line
++ [[     #numGenes options: 0 = all or specify a limit e.g. 500 for the first 500 results == *\v\c\f\:* ]]
++ [[     #numGenes options: 0 = all or specify a limit e.g. 500 for the first 500 results == *\p\e\d\:* ]]
++ [[     #numGenes options: 0 = all or specify a limit e.g. 500 for the first 500 results == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #numGenes options: 0 = all or specify a limit e.g. 500 for the first 500 results'
++ IFS=
++ read -r line
++ [[     numGenes: 1000 == *\v\c\f\:* ]]
++ [[     numGenes: 1000 == *\p\e\d\:* ]]
++ [[     numGenes: 1000 == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    numGenes: 1000'
++ IFS=
++ read -r line
++ [[     #outputPrefix options: specify the path/filename without an extension and this will be added == *\v\c\f\:* ]]
++ [[     #outputPrefix options: specify the path/filename without an extension and this will be added == *\p\e\d\:* ]]
++ [[     #outputPrefix options: specify the path/filename without an extension and this will be added == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #outputPrefix options: specify the path/filename without an extension and this will be added'
++ IFS=
++ read -r line
++ [[     # according to the outputFormats option. If unspecified this will default to the following: == *\v\c\f\:* ]]
++ [[     # according to the outputFormats option. If unspecified this will default to the following: == *\p\e\d\:* ]]
++ [[     # according to the outputFormats option. If unspecified this will default to the following: == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    # according to the outputFormats option. If unspecified this will default to the following:'
++ IFS=
++ read -r line
++ [[     # {exomiserDir}/results/input-vcf-name-exomiser-results.html == *\v\c\f\:* ]]
++ [[     # {exomiserDir}/results/input-vcf-name-exomiser-results.html == *\p\e\d\:* ]]
++ [[     # {exomiserDir}/results/input-vcf-name-exomiser-results.html == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    # {exomiserDir}/results/input-vcf-name-exomiser-results.html'
++ IFS=
++ read -r line
++ [[     # alternatively, specify a fully qualifed path only. e.g. /users/jules/exomes/analysis == *\v\c\f\:* ]]
++ [[     # alternatively, specify a fully qualifed path only. e.g. /users/jules/exomes/analysis == *\p\e\d\:* ]]
++ [[     # alternatively, specify a fully qualifed path only. e.g. /users/jules/exomes/analysis == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    # alternatively, specify a fully qualifed path only. e.g. /users/jules/exomes/analysis'
++ IFS=
++ read -r line
++ [[     outputPrefix: /Users/mkumar1/result == *\v\c\f\:* ]]
++ [[     outputPrefix: /Users/mkumar1/result == *\p\e\d\:* ]]
++ [[     outputPrefix: /Users/mkumar1/result == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
+++ cut -d: -f1
++ oprefix='    outputPrefix'
+++ cut -d: -f2
++ oprefix_name_name=' /Users/mkumar1/result'
+++ echo
+++ sed 's/ *$//g'
++ prefix_name=
++ echo '    outputPrefix: /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/-223602523/exomiser_input//output/result'
++ IFS=
++ read -r line
++ [[     #out-format options: HTML, JSON, TSV_GENE, TSV_VARIANT, VCF (default: HTML) == *\v\c\f\:* ]]
++ [[     #out-format options: HTML, JSON, TSV_GENE, TSV_VARIANT, VCF (default: HTML) == *\p\e\d\:* ]]
++ [[     #out-format options: HTML, JSON, TSV_GENE, TSV_VARIANT, VCF (default: HTML) == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    #out-format options: HTML, JSON, TSV_GENE, TSV_VARIANT, VCF (default: HTML)'
++ IFS=
++ read -r line
++ [[     outputFormats: [HTML, JSON, TSV_GENE, TSV_VARIANT, VCF] == *\v\c\f\:* ]]
++ [[     outputFormats: [HTML, JSON, TSV_GENE, TSV_VARIANT, VCF] == *\p\e\d\:* ]]
++ [[     outputFormats: [HTML, JSON, TSV_GENE, TSV_VARIANT, VCF] == *\o\u\t\p\u\t\P\r\e\f\i\x\:* ]]
++ echo '    outputFormats: [HTML, JSON, TSV_GENE, TSV_VARIANT, VCF]'
++ IFS=
++ read -r line
++ mv b38.application.properties.yaml.tmp /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/1960677953/exomiser.yaml
++ IFS=
++ read -r line
++ [[ exomiser.data-directory=/Users/mkumar1/wdl/tar_example/app_exomiser/cromwell-executions/myWorkflow/ceb161e0-95bf-4e70-8781-a8f780a7b9e7/call-myTask2/inputs/-223602523/exomiser_input == \e\x\o\m\i\s\e\r\.\d\a\t\a\-\d\i\r\e\c\t\o\r\y* ]]
+++ cut -d= -f1
++ A=exomiser.data-directory
++ echo exomiser.data-directory=/cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/-223602523/exomiser_input
++ IFS=
++ read -r line
++ [[ exomiser.hg38.data-version=2102 == \e\x\o\m\i\s\e\r\.\d\a\t\a\-\d\i\r\e\c\t\o\r\y* ]]
++ echo exomiser.hg38.data-version=2102
++ IFS=
++ read -r line
++ [[ exomiser.hg38.transcript-source=refseq == \e\x\o\m\i\s\e\r\.\d\a\t\a\-\d\i\r\e\c\t\o\r\y* ]]
++ echo exomiser.hg38.transcript-source=refseq
++ IFS=
++ read -r line
++ [[ exomiser.hg38.variant-white-list-path=2102_hg38_clinvar_whitelist.tsv.gz == \e\x\o\m\i\s\e\r\.\d\a\t\a\-\d\i\r\e\c\t\o\r\y* ]]
++ echo exomiser.hg38.variant-white-list-path=2102_hg38_clinvar_whitelist.tsv.gz
++ IFS=
++ read -r line
++ [[ exomiser.hg38.data-directory=${exomiser.data-directory}/${exomiser.hg38.data-version}_hg38 == \e\x\o\m\i\s\e\r\.\d\a\t\a\-\d\i\r\e\c\t\o\r\y* ]]
++ echo 'exomiser.hg38.data-directory=${exomiser.data-directory}/${exomiser.hg38.data-version}_hg38'
++ IFS=
++ read -r line
++ [[ exomiser.hg38.cadd-snv-path=${exomiser.data-directory}/whole_genome_SNVs.tsv.gz == \e\x\o\m\i\s\e\r\.\d\a\t\a\-\d\i\r\e\c\t\o\r\y* ]]
++ echo 'exomiser.hg38.cadd-snv-path=${exomiser.data-directory}/whole_genome_SNVs.tsv.gz'
++ IFS=
++ read -r line
++ [[ exomiser.hg38.cadd-in-del-path=${exomiser.data-directory}/gnomad.genomes.r3.0.indel.tsv.gz == \e\x\o\m\i\s\e\r\.\d\a\t\a\-\d\i\r\e\c\t\o\r\y* ]]
++ echo 'exomiser.hg38.cadd-in-del-path=${exomiser.data-directory}/gnomad.genomes.r3.0.indel.tsv.gz'
++ IFS=
++ read -r line
++ [[ exomiser.phenotype.data-version=2102 == \e\x\o\m\i\s\e\r\.\d\a\t\a\-\d\i\r\e\c\t\o\r\y* ]]
++ echo exomiser.phenotype.data-version=2102
++ IFS=
++ read -r line
++ mv b38.application.properties.tmp /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/1960677953/b38.application.properties
++ java -Xms2g -Xmx8g -jar /software/reboot-utils/exomiser-cli-12.1.0/exomiser-cli-12.1.0.jar --analysis /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/1960677953/exomiser.yaml --spring.config.location=/cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/1960677953/b38.application.properties
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/tmp.29e55379
++ tar czvf /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/-223602523/exomiser_input/output.tar.gz /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/-223602523/exomiser_input/output
+tar: Removing leading `/' from member names
++ mkdir -p b38.application.properties_result
++ cp /cromwell-executions/myWorkflow/f30b3fed-c791-4e39-8790-5f1ed6f5135e/call-myTask/inputs/-223602523/exomiser_input/output.tar.gz b38.application.properties_result/output.tar.gz

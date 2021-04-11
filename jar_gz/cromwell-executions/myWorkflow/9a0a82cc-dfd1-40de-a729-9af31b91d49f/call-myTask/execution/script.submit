@@ -1,0 +1,20 @@
+#!/bin/bash
+# make sure there is no preexisting Docker CID file
+rm -f /Users/mkumar1/wdl/tar_example/jar_gz/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution/docker_cid
+# run as in the original configuration without --rm flag (will remove later)
+docker run \
+  --cidfile /Users/mkumar1/wdl/tar_example/jar_gz/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution/docker_cid \
+  -i \
+   \
+  --entrypoint /bin/bash \
+  -v /Users/mkumar1/wdl/tar_example/jar_gz/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask:/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask:delegated \
+  docker.io/man4ish/buildexomiser@sha256:c674c16a5306fafe0590561ce9a8add4079e3c199f9709c0323670387c9e6a50 /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution/script
+
+# get the return code (working even if the container was detached)
+rc=$(docker wait `cat /Users/mkumar1/wdl/tar_example/jar_gz/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution/docker_cid`)
+
+# remove the container after waiting
+docker rm `cat /Users/mkumar1/wdl/tar_example/jar_gz/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution/docker_cid`
+
+# return exit code
+exit $rc

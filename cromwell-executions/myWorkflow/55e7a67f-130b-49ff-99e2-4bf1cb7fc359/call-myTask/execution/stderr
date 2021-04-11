@@ -1,8 +1,0 @@
-+ mkdir bundle
-+ echo /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/inputs/-223602523/bundle.tar.gz
-+ tar -xzf /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/inputs/-223602523/bundle.tar.gz -C bundle
-++ realpath bundle
-+ path=/cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution/bundle
-+ echo /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution/bundle
-+ mv bundle/bundle/exomiser_genome_template_b38.yml bundle
-+ python3 /script.py -t /cromwell-executions/myWorkflow/55e7a67f-130b-49ff-99e2-4bf1cb7fc359/call-myTask/execution/bundle/exomiser_genome_template_b38.yml -o bundle.tar.gz.out_file

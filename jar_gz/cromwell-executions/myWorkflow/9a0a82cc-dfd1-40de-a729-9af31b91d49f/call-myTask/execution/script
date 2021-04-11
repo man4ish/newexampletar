@@ -1,0 +1,87 @@
+#!/bin/bash
+
+cd /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution
+tmpDir=$(mkdir -p "/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/tmp.3f9c36d4" && echo "/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/tmp.3f9c36d4")
+chmod 777 "$tmpDir"
+export _JAVA_OPTIONS=-Djava.io.tmpdir="$tmpDir"
+export TMPDIR="$tmpDir"
+export HOME="$HOME"
+(
+cd /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution
+
+)
+out9a0a82cc="${tmpDir}/out.$$" err9a0a82cc="${tmpDir}/err.$$"
+mkfifo "$out9a0a82cc" "$err9a0a82cc"
+trap 'rm "$out9a0a82cc" "$err9a0a82cc"' EXIT
+tee '/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution/stdout' < "$out9a0a82cc" &
+tee '/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution/stderr' < "$err9a0a82cc" >&2 &
+(
+cd /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution
+
+
+set -exo pipefail
+mkdir bundle
+echo /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/inputs/1960677953/exomiser_input.tar.gz
+tar -xzf /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/inputs/1960677953/exomiser_input.tar.gz -C bundle
+path=$(realpath bundle)
+echo $path 
+mv bundle/*/* bundle
+
+
+mkdir -p $path/output
+#mkdir -p 'b38.application.properties_result'/output
+
+while IFS= read -r line
+do
+  if [[ "$line" == *"vcf:"* ]]; then
+     vcf="$(cut -d':' -f1 <<<"$line")"
+     vcf_fname="$(cut -d':' -f2 <<<"$line")"
+     vcf_name=`echo $vcf_fname | sed 's/ *$//g'`
+     echo "$vcf: $path/"$vcf_name >> 'b38.application.properties.yaml.tmp'
+  elif [[ "$line" == *"ped:"* ]]; then
+     ped="$(cut -d':' -f1 <<<"$line")"
+     ped_name="$(cut -d':' -f2 <<<"$line")"
+     ped_fname=`echo $ped_name | sed 's/ *$//g'`
+     echo "$ped: $path/"$ped_fname >> 'b38.application.properties.yaml.tmp'
+  elif [[ "$line" == *"outputPrefix:"* ]]; then
+     oprefix="$(cut -d':' -f1 <<<"$line")"
+     oprefix_name_name="$(cut -d':' -f2 <<<"$line")"
+     prefix_name=`echo $oprefix_name | sed 's/ *$//g'`
+     echo "$oprefix: $path/"$prefix_fname"/output/result" >> 'b38.application.properties.yaml.tmp'
+     #echo "$oprefix: b38.application.properties_result/output/result" >> 'b38.application.properties.yaml.tmp'
+  else
+     echo "$line" >> 'b38.application.properties.yaml.tmp'
+  fi
+done < "/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/inputs/1960677953/exomiser.yaml"
+mv 'b38.application.properties.yaml.tmp' '/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/inputs/1960677953/exomiser.yaml'
+
+while IFS= read -r line
+do
+  if [[ "$line" == "exomiser.data-directory"* ]]; then
+     A="$(cut -d'=' -f1 <<<"$line")"
+     echo "$A=$path" >> 'b38.application.properties.tmp'
+  else
+     echo "$line" >> 'b38.application.properties.tmp'
+  fi
+done < "/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/inputs/1960677953/b38.application.properties"
+       
+mv 'b38.application.properties.tmp' '/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/inputs/1960677953/b38.application.properties'
+
+java -Xms2g -Xmx8g -jar /software/reboot-utils/exomiser-cli-12.1.0/exomiser-cli-12.1.0.jar --analysis /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/inputs/1960677953/exomiser.yaml --spring.config.location=/cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/inputs/1960677953/b38.application.properties
+tar czvf $path/output.tar.gz $path/output 
+mkdir -p 'b38.application.properties_result' 
+cp $path/output.tar.gz 'b38.application.properties_result/output.tar.gz'
+)  > "$out9a0a82cc" 2> "$err9a0a82cc"
+echo $? > /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution/rc.tmp
+(
+# add a .file in every empty directory to facilitate directory delocalization on the cloud
+cd /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution
+find . -type d -exec sh -c '[ -z "$(ls -A '"'"'{}'"'"')" ] && touch '"'"'{}'"'"'/.file' \;
+)
+(
+cd /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution
+sync
+
+
+)
+mv /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution/rc.tmp /cromwell-executions/myWorkflow/9a0a82cc-dfd1-40de-a729-9af31b91d49f/call-myTask/execution/rc
